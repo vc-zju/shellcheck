@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - gh-pages
+
+name: 'Trigger: Push action'
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@1.1.0
+    - name: Run ShellCheck
+      uses: ludeeus/action-shellcheck@master
+
+
+
+
